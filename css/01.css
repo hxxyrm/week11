@@ -1,0 +1,112 @@
+
+
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+body {
+    background-color: #cf0808;
+    font-family: 'Spoqa Han Sans Neo';
+}
+
+#section1 #picset {
+    width: 900px;
+    height: 450px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#section1 #picset img{
+    width: 900px;
+    height: 450px;
+    position: absolute;
+    transition: all 1s;
+}
+
+#section1 #picset dl {
+    background-color: rgba(0, 0, 0, 0.233);
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100px;
+    opacity: 0;
+    z-index: 1;
+}
+
+#section1 #picset dd {
+    text-align: cetner;
+    margin-top:35px;
+}
+
+#section1 #picset dl.fadeIn {
+    animation: fadeIn forwards 1s;
+}
+
+#section1 #picset dl.fadeOut {
+    animation: fadeOut forwards 1s;
+}
+@keyframes fadeIn {
+    from {bottom: -100px; opacity: 0;}
+    to {bottom: 0; opacity: 1;}
+}
+@keyframes fadeOut {
+    from {bottom: 0; opacity: 1;}
+    to {bottom: 20px; opacity: 0;}
+}
+#section1 #picset dt{
+    margin: 10px auto;
+}
+
+#section1 #dotList {
+    margin-top: 20px;
+}
+#section1 #dotList li {
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    color: #cf0808;
+    margin: 13px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#section1 #dotList li.active {
+    background-color: coral;
+}
+
+#section1 #ImgSet {
+    position: relative;
+    width: 900px;
+    height: 450px;
+    margin: auto;
+}
+
+#section1 button {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    color: #cf0808;
+    font-weight: bold;
+    margin-top: -50px;
+    cursor: pointer;
+}
+#section1 button:hover {
+    background-color: coral;
+}
+#section1 #prev_btn {
+    left: -150px;
+}
+#section1 #next_btn {
+    right: -150px;
+}

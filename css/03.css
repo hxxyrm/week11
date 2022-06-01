@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#section1 #ImgSet {
+    position: relative;
+    width: 1440px;
+    margin: 0 auto;
+}
+
+#section1 #ImgSet button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    cursor: pointer;
+}
+
+#section1 #ImgSet button:hover {
+    background-color: black;
+    color: white;
+}
+
+#section1 #ImgSet #prev_btn {
+    left: -120px;
+}
+
+#section1 #ImgSet #next_btn {
+    right: -120px;
+}
+
+#section1 #ImgSet button.disabled {
+    cursor: auto;
+    opacity: 0;
+}
+
+#section1 #ImgSet #picSet {
+    width: 1440px;
+    height: 540px;
+}
+
+#section1 #ImgSet #picSet img {
+    position: absolute;
+    top: 0;
+    translate: left 1s;
+}
+
+#section1 #ImgSet #dotList {
+    margin-top: 20px;
+}
+
+#section1 #ImgSet #dotList li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 15px;
+}
+
+#section1 #ImgSet #dotList li:hover {
+    background-color: gray;
+}
+
+#section1 #ImgSet #dotList li.active {
+    background-color: red;
+}
+
+#section1 #ImgSet dl {
+    position: absolute;
+    z-index: 1;
+    bottom: -100px;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    width: 100%;
+    transition: all 1s;
+    padding: 20px;
+}
+
+#section #ImgSet dl.active {
+    animation: textMotionIn forwards 1s;
+}
+
+#picSet dl.activeOut {
+    animation: textMotionOut forwards 1s;
+}
+
+@keyframes textMotionIn {
+    form {bottom: -100px; opactiy: 0;}
+    to {bottom: 0; opacity: 1;}
+}
+
+@keyframes textMotionOut {
+    from {bottom: 0; opacity: 1;}
+    to {bottom: 20px; opacity: 0;}
+}
